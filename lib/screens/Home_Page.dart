@@ -39,15 +39,7 @@ class _Home_PageState extends State<Home_Page> {
                 text: 'Accueil',
                 ),
               GButton(
-                icon: Icons.publish,
-                text: 'Publier',
-                ),
-              GButton(
-                icon: Icons.leaderboard,
-                text: 'Consulter',
-                ),
-              GButton(
-                icon: Icons.search,
+                icon: Icons.person,
                 text: 'Chercher',
                 ),
             ],
