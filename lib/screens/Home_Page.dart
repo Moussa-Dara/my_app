@@ -14,10 +14,11 @@ class _Home_PageState extends State<Home_Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         backgroundColor: Colors.green,
         elevation: 0,
         centerTitle: true,
-        title: Text('C A R L O C'),
+        title: Text('C A R L O C', style: TextStyle(fontSize: 40, fontFamily: "Ysabeau"),),
       ),
       bottomNavigationBar: Container(
         color: Colors.green,
@@ -38,9 +39,13 @@ class _Home_PageState extends State<Home_Page> {
                 icon: Icons.home,
                 text: 'Accueil',
                 ),
+                GButton(
+                icon: Icons.search,
+                text: 'Chercher',
+                ),
               GButton(
                 icon: Icons.person,
-                text: 'Chercher',
+                text: 'Profile',
                 ),
             ],
           ),
