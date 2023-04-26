@@ -37,11 +37,8 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.green,
           elevation: 0,
           centerTitle: true,
-          title: const [
+          title:
             Text('C A R L O C', style: TextStyle(fontSize: 30, fontFamily: "Ysabeau")),
-            Text('R E C H E R C H E R', style: TextStyle(fontSize: 30, fontFamily: "Ysabeau")),
-            Text('P R O F I L E', style: TextStyle(fontSize: 30, fontFamily: "Ysabeau"))
-          ][_currentIndex],
         ),
         //Naviguer entre les pages
         body: const [
