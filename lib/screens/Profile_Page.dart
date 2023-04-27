@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/Inscription_Page.dart';
 
 class Profile_Page extends StatefulWidget {
   const Profile_Page({super.key});
@@ -17,7 +18,7 @@ class _Profile_PageState extends State<Profile_Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-       child: SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Container(
             width: 300, // Définir la largeur souhaitée pour votre formulaire
             padding: const EdgeInsets.all(16),
@@ -118,10 +119,34 @@ class _Profile_PageState extends State<Profile_Page> {
                   ),
                   child: const Text('Connexion'),
                 ),
+                const SizedBox(height: 16),
+                Column(
+                  children: [
+                    GestureDetector(
+                      child: const Text(
+                        "Je n'ai pas de compte, m'inscrire",
+                        style: TextStyle(
+                          color: Colors.green,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Inscription_Page()),
+                        );
+                      },
+                    ),
+
+                    
+                    SizedBox(height: 16), // Ajoute un petit espace sous le texte
+                  ],
+                ),
               ],
-            ),
+            )
           ),
-        ),
+          
+        )
       ),)
     );
   }
