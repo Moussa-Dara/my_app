@@ -20,22 +20,22 @@ class _Profile_PageState extends State<Profile_Page> {
        child: SingleChildScrollView(
           child: Container(
             width: 300, // Définir la largeur souhaitée pour votre formulaire
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             child:
               Form(
               key: _formKey,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 32), // Ajoute un petit espace entre le haut de l'écran et le texte "Se connecter"
-              Text(
+                const SizedBox(height: 32), // Ajoute un petit espace entre le haut de l'écran et le texte "Se connecter"
+              const Text(
                 'Se connecter',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 32), // Ajoute un petit espace entre le texte "Se connecter" et le formulaire
+              const SizedBox(height: 32), // Ajoute un petit espace entre le texte "Se connecter" et le formulaire
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [ const
