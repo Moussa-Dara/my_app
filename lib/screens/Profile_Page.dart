@@ -29,8 +29,9 @@ class _Profile_PageState extends State<Profile_Page> {
               children: [
                 const SizedBox(height: 32), // Ajoute un petit espace entre le haut de l'écran et le texte "Se connecter"
               const Text(
-                'Se connecter',
+                'SE CONNECTER',
                 style: TextStyle(
+                  color: Colors.green,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -85,7 +86,22 @@ class _Profile_PageState extends State<Profile_Page> {
                     });
                   },
                 ),
-                const SizedBox(height: 32),
+                const SizedBox(height: 5),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        // Ajoutez ici votre action lorsque l'utilisateur appuie sur "Mot de passe oublié?"
+                      },
+                      child: const Text(
+                        'Mot de passe oublié?',
+                        style: TextStyle(color:Colors.green,)
+                        ),
+                    ),
+                  ],
+                ), 
+                const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
@@ -94,6 +110,12 @@ class _Profile_PageState extends State<Profile_Page> {
                       print('Mot de passe : $_password');
                     }
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green, // Changer la couleur du bouton
+                    textStyle: const TextStyle(fontSize: 20),
+                    minimumSize: const Size(100, 50), // Définir la taille minimale du bouton
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20), // Définir le padding du bouton
+                  ),
                   child: const Text('Connexion'),
                 ),
               ],
