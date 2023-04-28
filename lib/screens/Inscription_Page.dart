@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_app/main.dart';
 import 'package:my_app/screens/Profile_Page.dart';
 
@@ -21,21 +22,17 @@ class _Inscription_PageState extends State<Inscription_Page> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          elevation: 0,
-          centerTitle: true,
-          title:
-            Text('INSCRIPTION', style: TextStyle(fontSize: 30, fontFamily: "Ysabeau")),
-          leading: IconButton(
-            onPressed: (){
-              Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => MyApp()),);
-            },
-            icon: Icon(Icons.arrow_back)
+          appBar: AppBar(
+            backgroundColor: Colors.blue,
+            elevation: 0,
+            centerTitle: true,
+            // ignore: prefer_const_constructors
+            title: Text(
+              'C A R L O C',
+              style: GoogleFonts.satisfy(textStyle: TextStyle(fontSize: 35), color: Colors.black) ,
+            ),
+            
           ),
-        ),
         body: Center(
           child: SingleChildScrollView(
             child: Container(
