@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
   //sauvegarder le nmr actu de la page
 
   int _currentIndex = 0;
+  
 
   //mettre a jour le nmr de page
   setCurrentIndex(int index) {
@@ -51,13 +52,13 @@ class _MyAppState extends State<MyApp> {
             currentIndex: _currentIndex,
             onTap: (index) => setCurrentIndex(index),
             type: BottomNavigationBarType.fixed,
-            selectedItemColor: Colors.amberAccent,
+            selectedItemColor: Colors.black,
             unselectedItemColor: Colors.black,
             mouseCursor: SystemMouseCursors.grab,
             backgroundColor: Colors.blue,
             iconSize: 25,
             elevation: 10,
-            selectedFontSize: 12,
+            selectedFontSize: 18,
             selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
