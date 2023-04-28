@@ -8,7 +8,7 @@ class Home_Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Le contenu de mon app"),
+        child: Text(""),
       ),
     );
   }

@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'dart:ffi';
 
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/Home_Page.dart';
 import 'screens/Profile_Page.dart';
 import 'screens/Search_Page.dart';
@@ -16,8 +18,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-  //sauvegarder le nmr actu de la page 
+  //sauvegarder le nmr actu de la page
 
   int _currentIndex = 0;
 
@@ -31,45 +32,42 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          elevation: 0,
-          centerTitle: true,
-          title:
-            Text('C A R L O C', style: TextStyle(fontSize: 30, fontFamily: "Ysabeau")),
-        ),
-        //Naviguer entre les pages
-        body: const [
-          Home_Page(),
-          Search_Page(),
-          Profile_Page()
-        ][_currentIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _currentIndex,
-          onTap: (index) => setCurrentIndex(index),
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.blue,
-          unselectedItemColor: Colors.grey,
-          iconSize: 25,
-          elevation: 10,
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Accueil'
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.blue,
+            elevation: 0,
+            centerTitle: true,
+            // ignore: prefer_const_constructors
+            title: Text(
+              'CarLoc',
+              style: GoogleFonts.satisfy(textStyle: TextStyle(fontSize: 35), color: Colors.black) ,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Chercher'
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile'
-            ),
-          ]
+            
           ),
-        ),
+        //Naviguer entre les pages
+        body: const [ Home_Page(), Search_Page(), Profile_Page()][_currentIndex],
+        bottomNavigationBar: BottomNavigationBar(
+            currentIndex: _currentIndex,
+            onTap: (index) => setCurrentIndex(index),
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: Colors.amberAccent,
+            unselectedItemColor: Colors.black,
+            mouseCursor: SystemMouseCursors.grab,
+            backgroundColor: Colors.blue,
+            iconSize: 25,
+            elevation: 10,
+            selectedFontSize: 12,
+            selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home), label: 'Accueil',),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.search), label: 'Chercher',),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.person), label: 'Profil',),
+            ]),
+      ),
     );
   }
 }
