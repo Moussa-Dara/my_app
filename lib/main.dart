@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'screens/Home_Page.dart';
@@ -41,7 +39,7 @@ class _MyAppState extends State<MyApp> {
             centerTitle: true,
             // ignore: prefer_const_constructors
             title: Text(
-              'CarLoc',
+              'C A R L O C',
               style: GoogleFonts.satisfy(textStyle: TextStyle(fontSize: 35), color: Colors.black) ,
             ),
             
