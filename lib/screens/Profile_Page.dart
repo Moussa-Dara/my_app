@@ -43,13 +43,17 @@ class _Profile_PageState extends State<Profile_Page> {
                   children: [ const
                       Text( 
                         '+222 ',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
                       ),
                       const SizedBox(width: 6), // Ajoute un petit espace entre le texte et le champ de numéro
                       Expanded( 
                         child: TextFormField(
                           decoration: const InputDecoration(
                             hintText: 'Numéro de téléphone',
+                            suffixIcon: Icon(Icons.phone),
+                            suffixIconColor: Colors.green,
                           ),
                       keyboardType: TextInputType.phone,
                       validator: (value) {
@@ -73,7 +77,10 @@ class _Profile_PageState extends State<Profile_Page> {
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: 'Mot de passe',
+                    suffixIcon: Icon(Icons.lock),
+                    suffixIconColor: Colors.green,
                   ),
+                  obscureText: true,
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'Veuillez entrer votre mot de passe';
