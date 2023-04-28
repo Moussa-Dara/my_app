@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.blue,
             elevation: 0,
             centerTitle: true,
             // ignore: prefer_const_constructors
